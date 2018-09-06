@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 
-namespace SL_PRAMS
+namespace _01DUMMY_SL_PRAMS
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,5 +25,35 @@ namespace SL_PRAMS
         {
             InitializeComponent();
         }
+
+
+
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Controls.TextBox tb = (System.Windows.Controls.TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void Grid_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+        }
+        /*
+        private void SQUADRON_textbox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == Key.Delete || e.Key == Key.Return || e.Key == Key.Back || e.Key == Key.Space)
+            {
+                SQUADRON_textbox.Text = "You Entered: " + SQUADRON_textbox.Text;
+            }
+
+        }
+        */
+
+        private void TabItem_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Keyboard.ClearFocus();
+        }
+
     }
 }
