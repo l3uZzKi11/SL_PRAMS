@@ -35,11 +35,25 @@ namespace _01DUMMY_SL_PRAMS
             tb.GotFocus -= TextBox_GotFocus;
         }
 
+        private void Hyperlink_RequestNavigate(object sender,
+                                               System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.msn.com");
+        }
 
         private void TabItem_GotFocus(object sender, RoutedEventArgs e)
         {
             Keyboard.ClearFocus();
         }
 
+        private void check02_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Hyperlink_RequestNavigate_1(object sender, RequestNavigateEventArgs e)
+        {
+
+        }
     }
 }
