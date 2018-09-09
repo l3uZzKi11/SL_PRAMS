@@ -657,7 +657,7 @@
                                     </TextBlock>
 
                                     <TextBox x:Name="IMPACT_05" IsTabStop="False" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" Background="#97E0F5" 
-                                     BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280"/>
+                                     BorderBrush="#0353F1" BorderThickness="2" FontSize="10" FontWeight="Heavy" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280"/>
 
                                 </Grid>
                                 
