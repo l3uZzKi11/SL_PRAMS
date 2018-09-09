@@ -1,171 +1,290 @@
-﻿<Window x:Class="_01DUMMY_SL_PRAMS.MainWindow"
+﻿<Window xmlns:Borders="clr-namespace:ToggleSwitch.Borders;assembly=ToggleSwitch"  xmlns:ToggleSwitch="clr-namespace:ToggleSwitch;assembly=ToggleSwitch"  x:Class="_01DUMMY_SL_PRAMS.MainWindow"
+        
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
         xmlns:local="clr-namespace:_01DUMMY_SL_PRAMS"
+        
         mc:Ignorable="d"
-        Title="Squadron Level Purchase Request and Management System (SL-PRAMS)" Height="auto" Width="auto" Background="#ffAC58" SizeToContent="WidthAndHeight" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+        
+        Title="Squadron Level Purchase Request and Management System (SL-PRAMS)" Height="auto" Width="auto" Background="#ffAC58" SizeToContent="WidthAndHeight" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Icon="USAF_Symbol.jpg" WindowStartupLocation="CenterScreen">
+
     <Grid Height="auto" Width="auto" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
         <TabControl x:Name="tabcontrol0" Margin="0,0,0,0" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF8D19">
+
+            <!-- This is the beginning of the first tab in the GUI.  It contains all the requestor's information -->
+            
             <TabItem x:Name="Tab0" Header="SL-PRAMS Main" Focusable="True" GotFocus="TabItem_GotFocus" HorizontalAlignment="Left" Width="103">
+                
+                <!-- Using a nested StackPanel within DockPanel gives greater x & y control over presentation.-->
+                
                 <DockPanel LastChildFill="False" Width="auto" Height="auto">
+                    
                     <StackPanel Height="auto" Width="Auto" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Background="#6394F3">
-                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">Welcome to SL-PRAMS</TextBlock>
-                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">This system is designed to automate the Squadron Level purchases for regular Air Force personnel utilizing the IMPACT program</TextBlock>
-                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">Reference AFI64-117 for complete guidance and restrictions</TextBlock>
+                        
+                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
+                            
+                            Welcome to SL-PRAMS
+                            
+                        </TextBlock>
+                        
+                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
+                            
+                            This system is designed to automate the Squadron Level purchases for regular Air Force personnel utilizing the IMPACT program
+                        
+                        </TextBlock>
+                        
+                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
+                            
+                            Reference AFI64-117 for complete guidance and restrictions
+                        
+                        </TextBlock>
+
+                        <Button x:Name="Submit_Button" Height="50" Width="150" Background="Black" Foreground="white" FontWeight="Bold" BorderThickness="0" BorderBrush="Transparent">
+                            SUBMIT
+                        </Button>
+                        
                     </StackPanel>
+                    
                     <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center" Background="#6394F3">
+                        
                         <Grid Height="Auto" Width="Auto" Margin="0,10,0,0">
+                            
                             <Grid.ColumnDefinitions>
+                                
                                 <ColumnDefinition Width="150" />
+                                
                                 <ColumnDefinition Width="150" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" x:Name="First_Name_Label" Content="First Name" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,10,0,0" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="First_name_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" Text="FIRST NAME" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"  x:Name="MI_label" Content="MI" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="MI_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" Text="MIDDLE INITIAL" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"  x:Name="LAST_NAME_label" Content="Last Name" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="LAST_NAME_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" Text="LAST NAME" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"  x:Name="OFFICE_SYMBOL_label" Content="Office Symbol" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="OFFICE_SYMBOL_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" Text="OFFICE SYMBOL" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-                        <Grid Height="Auto" Width="Auto" Margin="0,0,0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0"  x:Name="SQUADRON_label" Content="Squadron" Margin="0,10,0,10"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="SQUADRON_textbox" Margin="0,10,0,10" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" Text="Squadron" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-                    </StackPanel>
-                </DockPanel>
-            </TabItem>
-            <TabItem x:Name="Tab1" Header="Government Purchase Card (IMPACT) Purchase" Focusable="True" GotFocus="TabItem_GotFocus">
-                <DockPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
-                        <Grid Height="auto" Width="auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
+                            
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock x:Name="GPC_Row0_description_textblock" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" Background="#97E0F5" FontSize="12" GotFocus="TextBox_GotFocus">Enter description of item(s) to be purchased</TextBlock>
-                            <TextBox x:Name="GPC_Row0_Description_textbox"  IsTabStop="False" Grid.Column="2" Text="Enter description here" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
+                            <DatePicker Grid.Column="0" x:Name="date_selector" Background="#97E0F5" HorizontalAlignment="left" VerticalAlignment="Top">
+                                
+                            </DatePicker>
+                        
                         </Grid>
-                        <Grid Height="auto" Width="auto">
+                        
+                        <Grid Height="Auto" Width="Auto" Margin="0,10,0,0">
+                            
                             <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" x:Name="First_Name_Label" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,10,0,0" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                                
+                                First Name
+                                
+                            </Label>
+
+                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="First_name_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus">
+                                
+                            </TextBox>
+                            
+                        </Grid>
+                        
+                        <Grid Height="Auto" Width="Auto">
+                            
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"  x:Name="MI_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                                
+                                Middle Initial
+                                
+                            </Label>
+
+                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="MI_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus">
+                                
+                            </TextBox>
+                            
+                        </Grid>
+                        
+                        <Grid Height="Auto" Width="Auto">
+                            
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" x:Name="LAST_NAME_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                                
+                                Last Name
+                                
+                            </Label>
+
+                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="LAST_NAME_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus">
+                                
+                            </TextBox>
+                            
+                        </Grid>
+                        
+                        <Grid Height="Auto" Width="Auto">
+                            
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"  x:Name="OFFICE_SYMBOL_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                                
+                                Office Symbol
+                                
+                            </Label>
+
+                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="OFFICE_SYMBOL_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus">
+                                
+                            </TextBox>
+                            
+                        </Grid>
+
+                        <Grid Height="Auto" Width="Auto" Margin="0,0,0,10">
+
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                                <ColumnDefinition Width="150" />
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"  x:Name="SQUADRON_label" Margin="0,10,0,10"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                            
+                                Squadron
+                            
+                            </Label>
+
+                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="SQUADRON_textbox" Margin="0,10,0,10" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus">
+                                
+                            </TextBox>
+                            
+                        </Grid>
+
+                    </StackPanel>
+                    
+                </DockPanel>
+                
+            </TabItem>
+
+            <!-- This is the beginning of the second tab in the GUI.  It contains information regarding the purchase of regular items and consumables less than $25,000-->
+            
+            <TabItem x:Name="Tab1" Header="Government Purchase Card (IMPACT) Purchase" Focusable="True" GotFocus="TabItem_GotFocus">
+                
+                <!-- Using a nested StackPanel within DockPanel gives greater x & y control over presentation.-->
+                
+                <DockPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                    <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center">
+
+                        <Grid Height="auto" Width="auto">
+
+                            <Grid.ColumnDefinitions>
+
                                 <ColumnDefinition Width="150"/>
+
                                 <ColumnDefinition Width="150"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check01" ToolTip="TOOLTIP" CheckedContent="YES" UncheckedContent="NO" />
+
+                            <TextBlock Grid.Column="1" x:Name="check01_text" TextWrapping="WrapWithOverflow" Background="#ffffff" Height="auto" Width="auto">
+                                
+                                Does this purchase require mandatory sourcing?
+
+                            </TextBlock>
+
+                        </Grid>
+
+                        <Grid Height="auto" Width="auto">
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="150"/>
+
+                                <ColumnDefinition Width="150"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="GPC_Row0_description_textblock" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" Background="#97E0F5" FontSize="12" GotFocus="TextBox_GotFocus">
+                                
+                                Enter description of item(s) to be purchased
+
+                            </TextBlock>
+
+                            <TextBox x:Name="GPC_Row0_Description_textbox"  IsTabStop="False" Grid.Column="2" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus">
+
+                                Enter description here
+
+                            </TextBox>
+
+                        </Grid>
+
+                        <Grid Height="auto" Width="auto">
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="150"/>
+
+                                <ColumnDefinition Width="150"/>
+
                             </Grid.ColumnDefinitions>
 
                             <TextBlock x:Name="GPC_Row1_Justification_textblock" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" Background="#97E0F5" FontSize="12" GotFocus="TextBox_GotFocus">Enter Justification for the purchase. Use Plain english.</TextBlock>
+
                             <TextBox x:Name="GPC_Row1_Justification_textbox" IsTabStop="False" Grid.Column="2" Text="Enter justification here" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
+
                         </Grid>
 
                     </StackPanel>
-                    <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
-                        <!--                    
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
 
-                            <TextBox IsTabStop="False" Grid.Column="0" x:Name="GPC_Row2_Description_textbox" Text="Enter description of item(s) to be purchased" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="GPC_Row2_Justification_textbox" Text="Enter justification for purchase" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="2" x:Name="GPC_Row2_Vendor_textbox" Text="vendor name" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="3" x:Name="GPC_Row2_GSA_Contract_textbox" Text="input vendor GSA contract #" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="4" x:Name="GPC_Row2_GSA_URL_textbox" Text="Input URL to GSA Advantage item(s) page" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="5" x:Name="GPC_Row2_URL2_textbox" Text="Input URL to other website for item(s)" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="6" x:Name="GPC_Row2_URL3_textbox" Text="Input URL to other website for item(s)" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="600" />
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBox IsTabStop="False" Grid.Column="0" x:Name="GPC_Row3_TextBox_null" Text="" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="1" x:Name="GPC_Row3_TextBox_GSA_Cost" Text="Input GSA Cost Here" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="2" x:Name="GPC_Row3_TextBox_Other1_cost" Text="Input Other Cost 1 Here" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                            <TextBox IsTabStop="False" Grid.Column="3" x:Name="GPC_Row3_TextBox_Other2_cost" Text="Input Other Cost 2 Here" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Background="#97E0F5" BorderBrush="#0353F1" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus"/>
-                        </Grid>
-
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-
-                            <CheckBox Grid.Column="0" x:Name="GPC_Row5_Checkbox_IT" Content="IT Purchase" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="1" x:Name="GPC_Row5_Checkbox_null1" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="2" x:Name="GPC_Row5_Checkbox_null2" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="3" x:Name="GPC_Row5_Checkbox_null3" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="4" x:Name="GPC_Row5_Checkbox_null4" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="5" x:Name="GPC_Row5_Checkbox_null5" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="6" x:Name="GPC_Row5_Checkbox_null6" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                        </Grid>
-                        <Grid Height="Auto" Width="Auto">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-
-                            <CheckBox Grid.Column="1" x:Name="GPC_Row6_Checkbox_null1" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="2" x:Name="GPC_Row6_Checkbox_null2" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="3" x:Name="GPC_Row6_Checkbox_null3" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="0" x:Name="GPC_Row6_Checkbox_null0" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="4" x:Name="GPC_Row6_Checkbox_null4" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="5" x:Name="GPC_Row6_Checkbox_null5" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                            <CheckBox Grid.Column="6" x:Name="GPC_Row6_Checkbox_null6" Content="reserved" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,0" Foreground="BLACK" BorderBrush="#0353F1" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12"/>
-                        </Grid>
-                        -->
-                    </StackPanel>
                 </DockPanel>
+                
             </TabItem>
 
-
-
+            <!--
+            
+            Version 2.0 will include code here for Training purchases
+            
+            <TabItem>
+                
+            </TabItem>
+            
+            Version 2.0 will include code here for Reporting
+            
+            <TabItem>
+                
+            </TabItem>     
+            
+            Version 3.0 will include code for contract purchases & service acquisition
+            
+            <TabItem>
+            
+            </TabItem>
+            
+            -->
         </TabControl>
 
-
-
     </Grid>
+    
 </Window>

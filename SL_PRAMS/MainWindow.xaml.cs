@@ -35,20 +35,6 @@ namespace _01DUMMY_SL_PRAMS
             tb.GotFocus -= TextBox_GotFocus;
         }
 
-        private void Grid_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-
-        }
-        /*
-        private void SQUADRON_textbox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if(e.Key == Key.Delete || e.Key == Key.Return || e.Key == Key.Back || e.Key == Key.Space)
-            {
-                SQUADRON_textbox.Text = "You Entered: " + SQUADRON_textbox.Text;
-            }
-
-        }
-        */
 
         private void TabItem_GotFocus(object sender, RoutedEventArgs e)
         {

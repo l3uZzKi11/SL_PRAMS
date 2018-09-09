@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL_PRAMS", "SL_PRAMS\SL_PRAMS.csproj", "{DEFD43DB-F9CC-4C03-B487-B08EF7360EA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitch", "..\Toggle_switch\sourceCode\sourceCode\trunk\WPF\ToggleSwitch\ToggleSwitch.csproj", "{F9426059-27DB-45F0-9012-B1234965FBE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DEFD43DB-F9CC-4C03-B487-B08EF7360EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEFD43DB-F9CC-4C03-B487-B08EF7360EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEFD43DB-F9CC-4C03-B487-B08EF7360EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9426059-27DB-45F0-9012-B1234965FBE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9426059-27DB-45F0-9012-B1234965FBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9426059-27DB-45F0-9012-B1234965FBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9426059-27DB-45F0-9012-B1234965FBE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
