@@ -22,6 +22,8 @@ This system leverages a database for accounting and management for historical us
 
 ##### this has severely hampered my progress in making the database operational since network connection over the internet was NOT initially planned and only local LAN will be used.
 
+![C S C425 Meme Module 2](CSC425_meme_module_2.jpg)
+
 ## Getting Started
 
 Build the self-contained application and deploy to end users.
