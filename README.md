@@ -4,6 +4,24 @@ SL PRAMS (pronounced 'slow' PRAMS) is a self-contained application that allows S
 
 This system leverages a database for accounting and management for historical usage in Squadron planning for fiscal year budget execution.
 
+## CSC425 Module 2 STATUS
+
+### This project is currently in the Alpha for the GUI.
+##### The formatting of the interface is finalized and user testing has started to validate performance.
+##### Until the database is completed full testing is on hold
+##### The ability to capture the user input and validate entries is the major component to be completed in Module 3 for proper systems integration to work.
+
+
+
+### The database is not started
+##### The database is planned to be a MySQL Community install (version 8.0.12.0) on a Microsoft Server 2016 (education license edition) running on a virtual machine hosted on my laptop.
+
+##### I am working on getting the database server established on the laptop from my desktop due to an upcoming business trip which will have me away from my normal computer for 1.5 months.
+
+##### I did not receive advance notice of this trip before beginning work on the project and thus the timeline for database completion has slipped substantially due to switching development environments.
+
+##### this has severely hampered my progress in making the database operational since network connection over the internet was NOT initially planned and only local LAN will be used.
+
 ## Getting Started
 
 Build the self-contained application and deploy to end users.
@@ -43,7 +61,7 @@ Contact Alexander Carsner (alexander.mcarsner@my.trident.edu) if interested in c
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Version 0.1.0
 
 ## Authors
 

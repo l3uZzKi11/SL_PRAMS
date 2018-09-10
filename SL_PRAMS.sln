@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL_PRAMS", "SL_PRAMS\SL_PRAMS.csproj", "{DEFD43DB-F9CC-4C03-B487-B08EF7360EA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9426059-27DB-45F0-9012-B1234965FBE0} = {F9426059-27DB-45F0-9012-B1234965FBE0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitch", "..\Toggle_switch\sourceCode\sourceCode\trunk\WPF\ToggleSwitch\ToggleSwitch.csproj", "{F9426059-27DB-45F0-9012-B1234965FBE0}"
 EndProject

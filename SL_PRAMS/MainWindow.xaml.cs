@@ -46,7 +46,7 @@ namespace _01DUMMY_SL_PRAMS
             Keyboard.ClearFocus();
         }
 
-        private void check02_Unchecked(object sender, RoutedEventArgs e)
+        private void Check02_Unchecked(object sender, RoutedEventArgs e)
         {
 
         }
