@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
+using Devart.Data.MySql;
 
 namespace _01DUMMY_SL_PRAMS
 {
@@ -55,5 +56,41 @@ namespace _01DUMMY_SL_PRAMS
         {
 
         }
+
+        private void Submit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            string constring = "host=192.168.182.128;port=3306;User Id=SL_PRAMS_USER;Password=SLPRAMSpassword2018";
+            string Query = "insert into slprams.impact (" +
+                "firstname," +
+                "middlename," +
+                "lastname," +
+                "officesymbol," +
+                "squadron) " +
+                "values(" +
+                "'" + this.First_name_textbox.Text + "'," +
+                "'" + this.MI_textbox.Text + "'," +
+                "'" + this.LAST_NAME_textbox.Text + "'," +
+                "'" + this.OFFICE_SYMBOL_textbox.Text + "','" + this.SQUADRON_textbox.Text +"')";
+            //,'" +  + "'
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand(Query, conDataBase);
+            MySqlDataReader myReader;
+
+            try
+            {
+                conDataBase.Open();
+                myReader = cmdDataBase.ExecuteReader();
+                System.Windows.MessageBox.Show("Purchase Request Submitted!");
+                while (myReader.Read())
+                {
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }
+

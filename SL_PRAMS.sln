@@ -8,12 +8,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL_PRAMS", "SL_PRAMS\SL_PRA
 		{F9426059-27DB-45F0-9012-B1234965FBE0} = {F9426059-27DB-45F0-9012-B1234965FBE0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitch", "..\Toggle_switch\sourceCode\sourceCode\trunk\WPF\ToggleSwitch\ToggleSwitch.csproj", "{F9426059-27DB-45F0-9012-B1234965FBE0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3E18A2F-731E-4523-8D80-8011C0D61483}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitch", "..\toggle-switch-control\WPF\ToggleSwitch\ToggleSwitch.csproj", "{F9426059-27DB-45F0-9012-B1234965FBE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
