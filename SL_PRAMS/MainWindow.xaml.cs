@@ -27,11 +27,14 @@ namespace _01DUMMY_SL_PRAMS
     public partial class MainWindow : MetroWindow
     //public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
 
         }
+
+
 
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
