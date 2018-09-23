@@ -64,7 +64,7 @@ namespace _01DUMMY_SL_PRAMS
         private string approvedsource;
 
 
-        private void Submit_Button_Click(object sender, RoutedEventArgs e)
+        private async void Submit_Button_Click(object sender, RoutedEventArgs e)
         {
 
             if (check01.IsChecked)
@@ -162,7 +162,7 @@ namespace _01DUMMY_SL_PRAMS
                     String.IsNullOrWhiteSpace(OFFICE_SYMBOL_textbox.Text) ||
                     String.IsNullOrWhiteSpace(SQUADRON_textbox.Text))
                 {
-                    this.ShowMessageAsync("You've missed mandatory fields on the main tab",
+                    await this.ShowMessageAsync("You've missed mandatory fields on the main tab",
                         "First name: " + First_name_textbox.Text + "\n" +
                         "MI: " + MI_textbox.Text + "\n" +
                         "Last name: " + LAST_NAME_textbox.Text + "\n" +
@@ -210,7 +210,8 @@ namespace _01DUMMY_SL_PRAMS
                             {
                                 conDataBase.Open();
                                 myReader = cmdDataBase.ExecuteReader();
-                                System.Windows.MessageBox.Show("Purchase Request Submitted!");
+                                await this.ShowMessageAsync("Purchase Request Submitted", "Your request has been successfully forwarded through SL PRAMS." + "\n" + "Your AO will recieve and email notification of the new request" + "\n" + "You may close the application or submit another request.");
+                                //System.Windows.MessageBox.Show("Purchase Request Submitted!");
                                 while (myReader.Read())
                                 {
                                 }
@@ -228,9 +229,12 @@ namespace _01DUMMY_SL_PRAMS
                                 String.IsNullOrWhiteSpace(IMPACT_25.Text) ||
                                 String.IsNullOrWhiteSpace(IMPACT_27.Text))
                             {
-                                System.Windows.MessageBox.Show("You must supply all information for 3 vendors if products aren't from an approved source." +
+                                await this.ShowMessageAsync("Please check the form and resubmit.", "You must supply all information for 3 vendors if products aren't from an approved source." +
                                     "\n" + "\n" +
                                     "You must also include a Description of the purchase being requested and a justification.");
+                                /*System.Windows.MessageBox.Show("You must supply all information for 3 vendors if products aren't from an approved source." +
+                                    "\n" + "\n" +
+                                    "You must also include a Description of the purchase being requested and a justification.");*/
                             }
 
                         }
@@ -242,6 +246,7 @@ namespace _01DUMMY_SL_PRAMS
                                 !String.IsNullOrWhiteSpace(IMPACT_13.Text) ||
                                 !String.IsNullOrWhiteSpace(IMPACT_21.Text))
                             {
+                                await this.ShowMessageAsync("Please check the form and resubmit.", "Approved must be in the correct column");
                                 System.Windows.MessageBox.Show("Approved must be in the correct column");
                             }
                             if (String.IsNullOrWhiteSpace(IMPACT_01.Text) ||
@@ -251,7 +256,8 @@ namespace _01DUMMY_SL_PRAMS
                                 String.IsNullOrWhiteSpace(IMPACT_09.Text) ||
                                 String.IsNullOrWhiteSpace(IMPACT_11.Text))
                             {
-                                System.Windows.MessageBox.Show("You have not entered enough information for the approved vendor" + "\n" + "Please check the form and resubmit.");
+                                await this.ShowMessageAsync("Please check the form and resubmit.", "You have not entered enough information for the approved vendor");
+                                //System.Windows.MessageBox.Show("You have not entered enough information for the approved vendor" + "\n" + "Please check the form and resubmit.");
                             }
 
                             if (!String.IsNullOrWhiteSpace(IMPACT_01.Text) &&
@@ -263,7 +269,8 @@ namespace _01DUMMY_SL_PRAMS
                             {
                                 conDataBase.Open();
                                 myReader = cmdDataBase.ExecuteReader();
-                                System.Windows.MessageBox.Show("Purchase Request Submitted!");
+                                await this.ShowMessageAsync("Purchase Request Submitted", "Your request has been successfully forwarded through SL PRAMS." + "\n" + "Your AO will recieve and email notification of the new request" + "\n" + "You may close the application or submit another request.");
+                                //System.Windows.MessageBox.Show("Purchase Request Submitted!");
                                 while (myReader.Read())
                                 {
                                 }
@@ -274,6 +281,7 @@ namespace _01DUMMY_SL_PRAMS
             }
             catch (Exception ex)
             {
+                await this.ShowMessageAsync("Oops! something broke!", "Please make a screenshot and record what you were doing." + "\n" + "Then, please contact your SL PRAMS administrator with the details so they can fix this bug!");
                 System.Windows.MessageBox.Show(ex.Message);
             }
         }
