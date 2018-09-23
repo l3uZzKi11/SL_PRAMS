@@ -15,16 +15,17 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using Devart.Data.MySql;
 using System.Globalization;
-//using MahApps.Metro.Controls;
-//using MahApps.Metro.Controls.Dialogs;
+using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
+using System.Diagnostics;
 
 namespace _01DUMMY_SL_PRAMS
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    //public partial class MainWindow : MetroWindow
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
+    //public partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -39,10 +40,10 @@ namespace _01DUMMY_SL_PRAMS
             tb.GotFocus -= TextBox_GotFocus;
         }
 
-        private void Hyperlink_RequestNavigate(object sender,
-                                               System.Windows.Navigation.RequestNavigateEventArgs e)
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.msn.com");
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
         }
 
         private void TabItem_GotFocus(object sender, RoutedEventArgs e)
@@ -140,7 +141,7 @@ namespace _01DUMMY_SL_PRAMS
             {
                 approvedsource = "NO";
             }
-
+            
             string constring = "host=192.168.182.128;port=3306;User Id=SL_PRAMS_USER;Password=SLPRAMSpassword2018";
             string Command = "INSERT INTO slprams.impact(firstname,middlename,lastname,officesymbol,squadron,date,mandatorysource,requireauthorizations,basesupply,tco,cipswoms,serviceagreement,fairandreasonable,approvedsource,description,justification,vendor1,contract1,url1,cost1,vendor2,contract2,url2,cost2,vendor3,contract3,url3,cost3)VALUES('" + First_name_textbox.Text + "','" + MI_textbox.Text + "','" + LAST_NAME_textbox.Text + "','" + OFFICE_SYMBOL_textbox.Text + "','" + SQUADRON_textbox.Text + "','" + date_selector.Text + "','" + mandatorysource + "','" + requireauthorizations + "','" + basesupply + "','" + tco + "','" + cipswoms + "','" + serviceagreement + "','" + fairandreasonable + "','" + approvedsource + "','" + this.IMPACT_01.Text + "','" + this.IMPACT_03.Text + "','" + this.IMPACT_05.Text + "','" + this.IMPACT_07.Text + "','" + this.IMPACT_09.Text + "','" + this.IMPACT_11.Text + "','" + this.IMPACT_13.Text + "','" + this.IMPACT_15.Text + "','" + this.IMPACT_17.Text + "','" + this.IMPACT_19.Text + "','" + this.IMPACT_21.Text + "','" + this.IMPACT_23.Text + "','" + this.IMPACT_25.Text + "','" + this.IMPACT_27.Text + "')";
 
@@ -158,21 +159,21 @@ namespace _01DUMMY_SL_PRAMS
                     String.IsNullOrWhiteSpace(OFFICE_SYMBOL_textbox.Text) ||
                     String.IsNullOrWhiteSpace(SQUADRON_textbox.Text))
                 {
-                    /*this.ShowMessageAsync("You've missed mandatory fields on the main tab",
+                    this.ShowMessageAsync("You've missed mandatory fields on the main tab",
                         "First name: " + First_name_textbox.Text + "\n" +
                         "MI: " + MI_textbox.Text + "\n" +
                         "Last name: " + LAST_NAME_textbox.Text + "\n" +
                         "Office symbol: " + OFFICE_SYMBOL_textbox.Text + "\n" +
                         "Squadron: " + SQUADRON_textbox.Text + "\n" +
                         "Date: " + date_selector.Text + "\n" +
-                        "Please populate all user information fields", MessageDialogStyle.Affirmative);*/
-                    System.Windows.Forms.MessageBox.Show("You've missed mandatory fields on the main tab" + "\n" +
+                        "Please populate all user information fields", MessageDialogStyle.Affirmative);
+                    /*System.Windows.Forms.MessageBox.Show("You've missed mandatory fields on the main tab" + "\n" +
                         "First name: " + First_name_textbox.Text + "\n" +
                         "MI: " + MI_textbox.Text + "\n" +
                         "Last name: " + LAST_NAME_textbox.Text + "\n" +
                         "Office symbol: " + OFFICE_SYMBOL_textbox.Text + "\n" +
                         "Squadron: " + SQUADRON_textbox.Text + "\n" +
-                        "Date: " + date_selector.Text, "Please populate all user information fields", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "Date: " + date_selector.Text, "Please populate all user information fields", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                 }
 
                 if (!String.IsNullOrWhiteSpace(date_selector.Text) || !String.IsNullOrWhiteSpace(First_name_textbox.Text) || !String.IsNullOrWhiteSpace(MI_textbox.Text) || !String.IsNullOrWhiteSpace(LAST_NAME_textbox.Text) || !String.IsNullOrWhiteSpace(OFFICE_SYMBOL_textbox.Text) || !String.IsNullOrWhiteSpace(SQUADRON_textbox.Text))
