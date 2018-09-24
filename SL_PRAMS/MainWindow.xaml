@@ -21,224 +21,224 @@
         mc:Ignorable="d"
         
         Title="Squadron Level Purchase Request and Management System (SL-PRAMS)" Height="auto" Width="auto" SizeToContent="WidthAndHeight" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" 
-        VerticalContentAlignment="Center" Icon="USAF_Symbol.jpg" WindowStartupLocation="CenterScreen">
+        VerticalContentAlignment="Center" Icon="USAF_Symbol.jpg" WindowStartupLocation="CenterScreen" Loaded="MainWindow_OnLoad">
 
     <!-- 
     Credit for the ToggleSwitch Library belongs to Eric Jensen (2015) 
     repurposed and duplicated under a MS-PL license.
     -->
 
+    <Grid Height="auto" Width="auto" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="605*"/>
+            <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="179*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+
+        <Controls:MetroTabControl x:Name="tabcontrol0" Margin="0,0,0.4,-0.2" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="2">
 
 
+            <!-- This is the beginning of the first tab in the GUI.  It contains all the requestor's information -->
 
+            <Controls:MetroTabItem x:Name="Tab0" Header="SL-PRAMS Main" Focusable="True" GotFocus="TabItem_GotFocus" HorizontalAlignment="Left" Width="auto" FontWeight="Heavy" FontSize="16" Cursor="Hand">
 
-        <Grid Height="auto" Width="auto" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="179*"/>
-                <RowDefinition Height="49*"/>
-            </Grid.RowDefinitions>
+                <!-- Using a nested StackPanel within DockPanel gives greater x & y control over presentation.-->
 
-            <Controls:MetroTabControl x:Name="tabcontrol0" Margin="0,0,0,0" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2">
+                <DockPanel LastChildFill="False" Width="auto" Height="auto">
 
-
-                <!-- This is the beginning of the first tab in the GUI.  It contains all the requestor's information -->
-
-                <Controls:MetroTabItem x:Name="Tab0" Header="SL-PRAMS Main" Focusable="True" GotFocus="TabItem_GotFocus" HorizontalAlignment="Left" Width="auto" FontWeight="Heavy" FontSize="16" Cursor="Hand">
-
-                    <!-- Using a nested StackPanel within DockPanel gives greater x & y control over presentation.-->
-
-                    <DockPanel LastChildFill="False" Width="auto" Height="auto" KeyboardNavigation.TabNavigation="Once">
-                    
-                    <StackPanel Height="auto" Width="Auto" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" KeyboardNavigation.TabNavigation="Once">
+                    <StackPanel Height="auto" Width="Auto" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top">
+                        
 
                         <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
                             
                             Welcome to SL-PRAMS
 
-                            </TextBlock>
+                        </TextBlock>
 
-                            <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
+                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
                             
                             This system is designed to automate the Squadron Level purchases for regular Air Force personnel utilizing the IMPACT program
 
-                            </TextBlock>
+                        </TextBlock>
 
-                            <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
+                        <TextBlock Width="150" Height="auto" TextWrapping="WrapWithOverflow" Margin="0,10,0,0">
                             
                             Reference AFI64-117 for complete guidance and restrictions
 
-                            </TextBlock>
+                        </TextBlock>
 
 
 
 
-                        </StackPanel>
+                    </StackPanel>
 
-                        <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center" >
+                    <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center" >
 
-                            <Grid Height="Auto" Width="Auto" Margin="0,10,0,0">
+                        <Grid Height="Auto" Width="Auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <DatePicker Grid.Column="0" x:Name="date_selector" HorizontalAlignment="left" VerticalAlignment="Top" Cursor="Hand">
+                            <DatePicker Grid.Column="0" x:Name="date_selector" HorizontalAlignment="left" VerticalAlignment="Top" Cursor="Hand">
+                            </DatePicker>
 
-                                </DatePicker>
+                        </Grid>
 
-                            </Grid>
+                        <Grid Height="Auto" Width="Auto" Margin="0,10,0,0">
 
-                            <Grid Height="Auto" Width="Auto" Margin="0,10,0,0">
+                            <Grid.ColumnDefinitions>
 
-                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                            </Grid.ColumnDefinitions>
 
-                                </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" x:Name="First_Name_Label" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,10,0,0" BorderBrush="Black"  BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
 
-                                <Label Grid.Column="0" x:Name="First_Name_Label" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,10,0,0" BorderBrush="Black"  BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                                First Name
 
-                                    First Name
+                            </Label>
 
-                                </Label>
-
-                                <TextBox Grid.Column="1" x:Name="First_name_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto"
+                            <TextBox Grid.Column="1" x:Name="First_name_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto"
                                      BorderThickness="2" BorderBrush="Black" FontSize="12" GotFocus="TextBox_GotFocus" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
                         </Grid>
 
-                            <Grid Height="Auto" Width="Auto">
+                        <Grid Height="Auto" Width="Auto">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <Label Grid.Column="0"  x:Name="MI_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                            <Label Grid.Column="0"  x:Name="MI_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
 
-                                    Middle Initial
+                                Middle Initial
 
-                                </Label>
+                            </Label>
 
-                                <TextBox Grid.Column="1" x:Name="MI_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
+                            <TextBox Grid.Column="1" x:Name="MI_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
                                      BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" Focusable="True" Cursor="Hand" SpellCheck.IsEnabled="True">
 
-                                </TextBox>
+                            </TextBox>
 
-                            </Grid>
+                        </Grid>
 
-                            <Grid Height="Auto" Width="Auto">
+                        <Grid Height="Auto" Width="Auto">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <Label Grid.Column="0" x:Name="LAST_NAME_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                            <Label Grid.Column="0" x:Name="LAST_NAME_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
 
-                                    Last Name
+                                Last Name
 
-                                </Label>
+                            </Label>
 
-                                <TextBox Grid.Column="1" x:Name="LAST_NAME_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
+                            <TextBox Grid.Column="1" x:Name="LAST_NAME_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
                                      BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" Focusable="True" Cursor="Hand" SpellCheck.IsEnabled="True">
 
-                                </TextBox>
+                            </TextBox>
 
-                            </Grid>
+                        </Grid>
 
-                            <Grid Height="Auto" Width="Auto">
+                        <Grid Height="Auto" Width="Auto">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <Label Grid.Column="0"  x:Name="OFFICE_SYMBOL_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                            <Label Grid.Column="0"  x:Name="OFFICE_SYMBOL_label" Margin="0,10,0,0"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
 
-                                    Office Symbol
+                                Office Symbol
 
-                                </Label>
+                            </Label>
 
-                                <TextBox Grid.Column="1" x:Name="OFFICE_SYMBOL_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
+                            <TextBox Grid.Column="1" x:Name="OFFICE_SYMBOL_textbox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
                                      BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" Cursor="Hand" SpellCheck.IsEnabled="True">
 
-                                </TextBox>
+                            </TextBox>
 
-                            </Grid>
+                        </Grid>
 
-                            <Grid Height="Auto" Width="Auto" Margin="0,0,0,10">
+                        <Grid Height="Auto" Width="Auto" Margin="0,0,0,10">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                    <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <Label Grid.Column="0"  x:Name="SQUADRON_label" Margin="0,10,0,10"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
+                            <Label Grid.Column="0"  x:Name="SQUADRON_label" Margin="0,10,0,10"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" Width="Auto" Height="Auto" FontSize="12">
 
-                                    Squadron
+                                Squadron
 
-                                </Label>
+                            </Label>
 
-                                <TextBox Grid.Column="1" x:Name="SQUADRON_textbox" Margin="0,10,0,10" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
+                            <TextBox Grid.Column="1" x:Name="SQUADRON_textbox" Margin="0,10,0,10" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" BorderBrush="Black" 
                                      BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" Cursor="Hand" SpellCheck.IsEnabled="True">
 
-                                </TextBox>
+                            </TextBox>
 
-                            </Grid>
+                        </Grid>
 
-                        </StackPanel>
+                    </StackPanel>
 
-                    </DockPanel>
+                </DockPanel>
 
-                </Controls:MetroTabItem>
+            </Controls:MetroTabItem>
 
-                <!-- This is the beginning of the second tab in the GUI.  It contains information regarding the purchase of regular items and consumables less than $25,000-->
+            <!-- This is the beginning of the second tab in the GUI.  It contains information regarding the purchase of regular items and consumables less than $25,000-->
 
-                <Controls:MetroTabItem x:Name="Tab1" Header="Government Purchase Card (IMPACT) Purchase" Focusable="True" GotFocus="TabItem_GotFocus" FontWeight="Heavy" FontSize="16" Cursor="Hand">
+            <Controls:MetroTabItem x:Name="Tab1" Header="Government Purchase Card (IMPACT) Purchase" Focusable="True" GotFocus="TabItem_GotFocus" FontWeight="Heavy" FontSize="16" Cursor="Hand">
 
-                    <!-- Using a nested StackPanel within DockPanel gives greater x & y control over presentation.-->
+                <!-- Using a nested StackPanel within DockPanel gives greater x & y control over presentation.-->
 
-                    <DockPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <DockPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-                        <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center">
+                    <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center">
 
 
-                            <!-- Begin Toggle Checks for required validation. All purchases must answer these basic questions -->
+                        <!-- Begin Toggle Checks for required validation. All purchases must answer these basic questions -->
 
-                            <!-- first toggleswitch -->
+                        <!-- first toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check01" ToolTip="See Federal Acquisition Regulation (FAR), Part 8—Required Sources of Supplies and Services" CheckedContent="YES" UncheckedContent="NO" />
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check01" ToolTip="See Federal Acquisition Regulation (FAR), Part 8—Required Sources of Supplies and Services" CheckedContent="YES" UncheckedContent="NO" />
 
-                                <TextBlock Grid.Column="1" x:Name="check01_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="See Federal Acquisition Regulation (FAR), Part 8—Required Sources of Supplies and Services via the HyperLink">
+                            <TextBlock Grid.Column="1" x:Name="check01_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="See Federal Acquisition Regulation (FAR), Part 8—Required Sources of Supplies and Services via the HyperLink">
                                 
                                 <Hyperlink NavigateUri="https://www.acquisition.gov/far/html/FARTOCP08.html" RequestNavigate="Hyperlink_RequestNavigate">
                                     
@@ -246,26 +246,26 @@
                                     
                                 </Hyperlink>
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Second toggleswitch -->
+                        <!-- Second toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check02" ToolTip="AFI 64-117, Paragraph 7.12. Purchases Requiring Additional Authorization . All purchases requiring additional authorizations must be documented. (T-1) Coordination via electronic mail is the most practical method for document approval. If verbal approval is obtained from the controlling/servicing organization, a memorandum for record shall be completed to document the date and identity of the authorizing official. Requests for the following supplies, equipment, or non-personal services require the cardholder to contact the specified controlling/servicing organization before making the purchase. If any of the following purchases require additional terms and conditions, contact your servicing contracting office; unless the purchase is against an existing contract or blanket purchase agreement. " CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check02" ToolTip="AFI 64-117, Paragraph 7.12. Purchases Requiring Additional Authorization . All purchases requiring additional authorizations must be documented. (T-1) Coordination via electronic mail is the most practical method for document approval. If verbal approval is obtained from the controlling/servicing organization, a memorandum for record shall be completed to document the date and identity of the authorizing official. Requests for the following supplies, equipment, or non-personal services require the cardholder to contact the specified controlling/servicing organization before making the purchase. If any of the following purchases require additional terms and conditions, contact your servicing contracting office; unless the purchase is against an existing contract or blanket purchase agreement. " CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check02_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="See AFI 64-117 for full details. EXAMPLES: Additional terms/conditions, medical, constructions, IT equipment, property leases, service agreements, construction, amounts over $10K, advertisements, food items, cameras, DLA printing, business cards, professional services, repairs for equipment, vehicles, rental or lease of aicraft or material handling equipment, nuclear weapons modifications, TMDE, XB/XF items for weapons systems, budget code 9 equipment assets over $5K, budget code 8 items, Small Arms accessories not already approved by AFSFC/FGWL, Bird Strike hazard program purchases, or Civillian leadership Training">
+                            <TextBlock Grid.Column="1" x:Name="check02_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="See AFI 64-117 for full details. EXAMPLES: Additional terms/conditions, medical, constructions, IT equipment, property leases, service agreements, construction, amounts over $10K, advertisements, food items, cameras, DLA printing, business cards, professional services, repairs for equipment, vehicles, rental or lease of aicraft or material handling equipment, nuclear weapons modifications, TMDE, XB/XF items for weapons systems, budget code 9 equipment assets over $5K, budget code 8 items, Small Arms accessories not already approved by AFSFC/FGWL, Bird Strike hazard program purchases, or Civillian leadership Training">
  
                                 <Hyperlink NavigateUri="http://static.e-publishing.af.mil/production/1/saf_aq/publication/afi64-117/afi64-117.pdf" RequestNavigate="Hyperlink_RequestNavigate">
                                     
@@ -273,26 +273,26 @@
                                 
                                 </Hyperlink>
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Third toggleswitch -->
+                        <!-- Third toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check03" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check03" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check03_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="">
+                            <TextBlock Grid.Column="1" x:Name="check03_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="">
  
                                 <!--<Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate">-->
                                     
@@ -304,26 +304,26 @@
                                 
                                 <!--</Hyperlink>-->
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Fourth toggleswitch -->
+                        <!-- Fourth toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check04" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check04" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check04_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="">
+                            <TextBlock Grid.Column="1" x:Name="check04_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="">
  
                                 <!--<Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate">-->
                                     
@@ -331,26 +331,26 @@
                                 
                                 <!--</Hyperlink>-->
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Fifth toggleswitch -->
+                        <!-- Fifth toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check05" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check05" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check05_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="All Air Force IT hardware will be acquired using the applicable enterprise buying programs through AFWay (e.g. Quantum Enterprise Buy (QEB), Digital Printing &amp; Imaging (DPI), Cellular Services and Devices Blanket Purchase Agreements) unless waived by the MAJCOM CIO/A6 through the AFWay process.">
+                            <TextBlock Grid.Column="1" x:Name="check05_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="All Air Force IT hardware will be acquired using the applicable enterprise buying programs through AFWay (e.g. Quantum Enterprise Buy (QEB), Digital Printing &amp; Imaging (DPI), Cellular Services and Devices Blanket Purchase Agreements) unless waived by the MAJCOM CIO/A6 through the AFWay process.">
  
                                 <Hyperlink NavigateUri="https://cipsaf.tinker.af.mil" RequestNavigate="Hyperlink_RequestNavigate">
                                     
@@ -358,26 +358,26 @@
                                 
                                 </Hyperlink>
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Sixth toggleswitch -->
+                        <!-- Sixth toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check06" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check06" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check06_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="Due Dilligence, don't pay twice for something">
+                            <TextBlock Grid.Column="1" x:Name="check06_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="Due Dilligence, don't pay twice for something">
  
                                 <!--<Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate">-->
                                     
@@ -385,26 +385,26 @@
                                 
                                 <!--</Hyperlink>-->
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Seventh toggleswitch -->
+                        <!-- Seventh toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check07" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check07" ToolTip="" CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check07_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="Treat the Government's money like your own &amp; try to save as much as you can.">
+                            <TextBlock Grid.Column="1" x:Name="check07_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="Treat the Government's money like your own &amp; try to save as much as you can.">
  
                                 <!--<Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate">-->
                                     
@@ -412,26 +412,26 @@
                                 
                                 <!--</Hyperlink>-->
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- eigth toggleswitch -->
+                        <!-- eigth toggleswitch -->
 
-                            <Grid Height="auto" Width="auto" Margin="0,10,0,0">
+                        <Grid Height="auto" Width="auto" Margin="0,10,0,0">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
 
-                                <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check08" ToolTip="Usage of a government source requires only one quote source" CheckedContent="YES" UncheckedContent="NO"/>
+                            <ToggleSwitch:HorizontalToggleSwitch Grid.Column="0" x:Name="check08" ToolTip="Usage of a government source requires only one quote source" CheckedContent="YES" UncheckedContent="NO"/>
 
-                                <TextBlock Grid.Column="1" x:Name="check08_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="DoD Sources: GSA Advantage, AFWAY, DoD FedMall, DAPS">
+                            <TextBlock Grid.Column="1" x:Name="check08_text" TextWrapping="WrapWithOverflow" Height="auto" Width="auto" FontSize="10" FontWeight="Heavy" ToolTip="DoD Sources: GSA Advantage, AFWAY, DoD FedMall, DAPS">
  
                                     Is the purchase from an approved Government Source?
                                 
@@ -467,11 +467,11 @@
                                 
                                 </Hyperlink>
 
-                                </TextBlock>
+                            </TextBlock>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- This feature is reserved for version 2.0
+                        <!-- This feature is reserved for version 2.0
                         ninth toggleswitch 
 
                         <Grid Height="auto" Width="auto" Margin="0,10,0,0">
@@ -500,106 +500,106 @@
                         </Grid>
                         -->
 
-                        </StackPanel>
+                    </StackPanel>
 
-                        <!-- Quote details are entered into the fields here by the user.  This data is used for the inputs into the database. -->
+                    <!-- Quote details are entered into the fields here by the user.  This data is used for the inputs into the database. -->
 
-                        <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10" VerticalAlignment="top">
+                    <StackPanel Height="Auto" Width="Auto" HorizontalAlignment="Center" Margin="10" VerticalAlignment="top">
 
-                            <!-- First Purchase dataset -->
+                        <!-- First Purchase dataset -->
 
-                            <Grid Height="auto" Width="auto">
+                        <Grid Height="auto" Width="auto">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                    <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <TextBlock x:Name="IMPACT_00" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" FontSize="12" ToolTip="Use Plain English." VerticalAlignment="top">
+                            <TextBlock x:Name="IMPACT_00" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" FontSize="12" ToolTip="Use Plain English." VerticalAlignment="top">
                                 
                                     Enter description of item(s) to be purchased
 
-                                </TextBlock>
+                            </TextBlock>
 
                             <TextBox x:Name="IMPACT_01" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Enter Description Here" Grid.Column="2" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="80" BorderBrush="Black" 
                                      BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Second Purchase dataset -->
+                        <!-- Second Purchase dataset -->
 
-                            <Grid Height="auto" Width="auto">
+                        <Grid Height="auto" Width="auto">
 
-                                <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
 
-                                    <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
 
-                                    <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
 
-                                </Grid.ColumnDefinitions>
+                            </Grid.ColumnDefinitions>
 
-                                <TextBlock x:Name="IMPACT_02" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" FontSize="12" ToolTip="Use Plain English." VerticalAlignment="top">
+                            <TextBlock x:Name="IMPACT_02" Width="auto" Height="auto" Grid.Column="0" Margin="0,10,0,0" TextWrapping="WrapWithOverflow" FontSize="12" ToolTip="Use Plain English." VerticalAlignment="top">
                                 
                                 Enter Justification for the purchase.
 
-                                </TextBlock>
+                            </TextBlock>
 
-                                <TextBox x:Name="IMPACT_03" Grid.Column="2" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="80" 
+                            <TextBox x:Name="IMPACT_03" Grid.Column="2" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="80" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                            </Grid>
+                        </Grid>
 
-                            <!-- Third Purchase Dataset 
+                        <!-- Third Purchase Dataset 
                         
                         This set of data collectors is split using a combination of stack and dock panels to format it properly
                         
                         -->
 
-                            <DockPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
+                        <DockPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0">
 
-                                <StackPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <StackPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-                                    <TextBlock Text="Approved Source Here" Width="150" Height="50" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" TextAlignment="center"/>
+                                <TextBlock Text="Approved Source Here" Width="150" Height="50" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" TextAlignment="center"/>
 
-                                    <!-- begin  vendor stack 1-->
-                                    <!-- Stack 1 divider 0 -->
-                                    <Grid Height="auto" Width="auto" ToolTip="Only one vendor is required if using an approved Government Source such as GSA Advantage.">
+                                <!-- begin  vendor stack 1-->
+                                <!-- Stack 1 divider 0 -->
+                                <Grid Height="auto" Width="auto" ToolTip="Only one vendor is required if using an approved Government Source such as GSA Advantage.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_04" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_04" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         Vendor 1
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_05" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_05" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="10" FontWeight="Heavy" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 1 divider 1 -->
+                                <!-- Stack 1 divider 1 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the GSA contract # here if available.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the GSA contract # here if available.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_06" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_06" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                         
                                         <Hyperlink NavigateUri="https://www.gsaelibrary.gsa.gov/ElibMain/home.do" RequestNavigate="Hyperlink_RequestNavigate">
                                             
@@ -607,101 +607,101 @@
                                             
                                         </Hyperlink>
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_07" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_07" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 1 divider 2 -->
+                                <!-- Stack 1 divider 2 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Input the URL to the vendor website where the item is referenced for sale.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Input the URL to the vendor website where the item is referenced for sale.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_08" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_08" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         URL
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_09" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_09" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 1 divider 3 -->
+                                <!-- Stack 1 divider 3 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the cost in USD and cents.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the cost in USD and cents.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_10" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_10" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         COST
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_11" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_11" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                </StackPanel>
+                            </StackPanel>
 
-                                <StackPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <StackPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-                                    <Label Content="" Width="150" Height="50"/>
+                                <Label Content="" Width="150" Height="50"/>
 
-                                    <!-- begin  vendor stack 2-->
-                                    <!-- Stack 2 divider 0 -->
-                                    <Grid Height="auto" Width="auto" ToolTip="Only one vendor is required if using an approved Government Source such as GSA Advantage.">
+                                <!-- begin  vendor stack 2-->
+                                <!-- Stack 2 divider 0 -->
+                                <Grid Height="auto" Width="auto" ToolTip="Only one vendor is required if using an approved Government Source such as GSA Advantage.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_12" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_12" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         Vendor 2
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_13" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_13" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 2 divider 1 -->
+                                <!-- Stack 2 divider 1 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the GSA contract # here if available.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the GSA contract # here if available.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_14" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_14" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                         
                                         <Hyperlink NavigateUri="https://www.gsaelibrary.gsa.gov/ElibMain/home.do" RequestNavigate="Hyperlink_RequestNavigate">
                                             
@@ -709,101 +709,101 @@
                                             
                                         </Hyperlink>
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_15" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_15" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 2 divider 2 -->
+                                <!-- Stack 2 divider 2 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Input the URL to the vendor website where the item is referenced for sale.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Input the URL to the vendor website where the item is referenced for sale.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_16" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_16" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         URL
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_17" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_17" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 2 divider 3 -->
+                                <!-- Stack 2 divider 3 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the cost in USD and cents.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the cost in USD and cents.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_18" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_18" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         COST
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_19" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_19" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                </StackPanel>
+                            </StackPanel>
 
-                                <StackPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <StackPanel Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-                                    <Label Content="" Height="50" Width="150" />
+                                <Label Content="" Height="50" Width="150" />
 
-                                    <!-- begin  vendor stack 2-->
-                                    <!-- Stack 3 divider 0 -->
-                                    <Grid Height="auto" Width="auto" ToolTip="Only one vendor is required if using an approved Government Source such as GSA Advantage.">
+                                <!-- begin  vendor stack 2-->
+                                <!-- Stack 3 divider 0 -->
+                                <Grid Height="auto" Width="auto" ToolTip="Only one vendor is required if using an approved Government Source such as GSA Advantage.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_20" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
+                                    <TextBlock x:Name="IMPACT_20" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top">
                                 
                                         Vendor 3
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_21" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_21" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 3 divider 1 -->
+                                <!-- Stack 3 divider 1 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the GSA contract # here if available.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the GSA contract # here if available.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_22" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top" >
+                                    <TextBlock x:Name="IMPACT_22" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top" >
                                         
                                         <Hyperlink NavigateUri="https://www.gsaelibrary.gsa.gov/ElibMain/home.do" RequestNavigate="Hyperlink_RequestNavigate">
                                             
@@ -811,68 +811,68 @@
                                             
                                         </Hyperlink>
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_23" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_23" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 3 divider 2 -->
+                                <!-- Stack 3 divider 2 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Input the URL to the vendor website where the item is referenced for sale.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Input the URL to the vendor website where the item is referenced for sale.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_24" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top" >
+                                    <TextBlock x:Name="IMPACT_24" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top" >
                                 
                                         URL
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_25" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_25" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
-                                    <!-- Stack 3 divider 3 -->
+                                <!-- Stack 3 divider 3 -->
 
-                                    <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the cost in USD and cents.">
+                                <Grid Height="auto" Width="auto" Margin="0,5,0,0" ToolTip="Enter the cost in USD and cents.">
 
-                                        <Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
 
-                                            <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
 
-                                            <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="200"/>
 
-                                        </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock x:Name="IMPACT_26" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top" >
+                                    <TextBlock x:Name="IMPACT_26" Width="auto" Height="auto" Grid.Column="0" Margin="0,0,5,0" TextWrapping="WrapWithOverflow" FontSize="10" FontWeight="Heavy" VerticalAlignment="Top" >
                                 
                                         COST
 
-                                        </TextBlock>
+                                    </TextBlock>
 
-                                        <TextBox x:Name="IMPACT_27" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
+                                    <TextBox x:Name="IMPACT_27" Grid.Column="1"  Margin="0,0,5,0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="40" 
                                      BorderBrush="Black" BorderThickness="2" FontSize="12" GotFocus="TextBox_GotFocus" VerticalScrollBarVisibility="Auto" MaxLength="280" Cursor="Hand" SpellCheck.IsEnabled="True"/>
 
-                                    </Grid>
+                                </Grid>
 
 
 
-                                </StackPanel>
+                            </StackPanel>
 
 
 
-                            </DockPanel>
+                        </DockPanel>
 
-                            <!-- 
+                        <!-- 
                         
                         
                         
@@ -890,10 +890,10 @@
                         <Button x:Name="Submit_Button" Margin="10" Height="auto" Width="auto" FontWeight="Bold" BorderThickness="3" FontSize="50" Cursor="Hand" BorderBrush="Black" Click="Submit_Button_Click">
 
                             SUBMIT
-                            </Button>
+                        </Button>
 
 
-                            <!--
+                        <!--
                         
                         
                         
@@ -924,13 +924,13 @@
 
 
 
-                        </StackPanel>
+                    </StackPanel>
 
-                    </DockPanel>
+                </DockPanel>
 
-                </Controls:MetroTabItem>
+            </Controls:MetroTabItem>
 
-                <!--
+            <!--
             
             Version 2.0 will include code here for Training purchases
             
@@ -954,9 +954,9 @@
 
 
 
-            </Controls:MetroTabControl>
+        </Controls:MetroTabControl>
 
-        </Grid>
+    </Grid>
 
 
 

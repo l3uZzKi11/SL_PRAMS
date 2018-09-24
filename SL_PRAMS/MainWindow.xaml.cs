@@ -34,8 +34,6 @@ namespace _01DUMMY_SL_PRAMS
 
         }
 
-
-
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.TextBox tb = (System.Windows.Controls.TextBox)sender;
@@ -43,7 +41,13 @@ namespace _01DUMMY_SL_PRAMS
             tb.GotFocus -= TextBox_GotFocus;
         }
 
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        private void MainWindow_OnLoad(object sender, RoutedEventArgs e)
+        {
+            First_name_textbox.Focus();
+            First_name_textbox.SelectAll();
+        }  
+
+    private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
@@ -286,7 +290,10 @@ namespace _01DUMMY_SL_PRAMS
             }
         }
 
+        private void TextBlock_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
 
+        }
     }
 }
 

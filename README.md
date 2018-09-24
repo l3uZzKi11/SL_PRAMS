@@ -4,31 +4,52 @@ SL PRAMS (pronounced 'slow' PRAMS) is a self-contained application that allows S
 
 This system leverages a database for accounting and management for historical usage in Squadron planning for fiscal year budget execution.
 
-## CSC425 Module 2 STATUS
+## CSC425 Module 3 STATUS
 
-### This project is currently in the Alpha for the GUI.
-##### The formatting of the interface is finalized and user testing has started to validate performance.
-##### Until the database is completed full testing is on hold
+### This project is currently in the Beta for the GUI.
+##### Final tweaks to the UI have been completed and primary functionality has been adequately tested
+##### Local network database has been successfully configured and tested.
 ##### The ability to capture the user input and validate entries is the major component to be completed in Module 3 for proper systems integration to work.
+##### There are no errors in the code nor bugs on user actions.
+The system is currently configured to only work on my laptop so full functionality by others would require the VM files which are rather large.
+alternatively, i've created some videos showing the application in action for review that covers the majority of the applications use cases.
 
 
+### The Database Works though!
+its happily chugging along being its database self.
+The email functionality/watchdog service is completely inoperable at this point.  This will be the primary focus in module 4.
 
-### The database is not started
-##### The database is planned to be a MySQL Community install (version 8.0.12.0) on a Microsoft Server 2016 (education license edition) running on a virtual machine hosted on my laptop.
-
-##### I am working on getting the database server established on the laptop from my desktop due to an upcoming business trip which will have me away from my normal computer for 1.5 months.
-
-##### I did not receive advance notice of this trip before beginning work on the project and thus the timeline for database completion has slipped substantially due to switching development environments.
-
-##### this has severely hampered my progress in making the database operational since network connection over the internet was NOT initially planned and only local LAN will be used.
-
-![C S C425 Meme Module 2](CSC425_meme_module_2.jpg)
+# My laptop DIED
+### Horribly and irreversibly
+this, along with long shiftwork prior to my departure, and travel limitations i've lost 5-6 days of productivity... so the progress thus far makes me feel good!
 
 ## Getting Started
 
 Build the self-contained application and deploy to end users.
 
 Database configuration must be accomplished before the program can successfully execute.
+
+# VIDEOS
+
+
+#Example of exceptional user handling
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PFx9jiwqoT4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+#Example of some errant user handling
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BVBZZ6l5b6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+#Brief overview of the core C# mechanisms
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hlA1XqXnlb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+#Database overview
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5uzttjHhV_c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+#issues discussion, planning mechanism, configuration tracking
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NnLapZkr_3o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+https://trello.com/b/b7el5Y7P/slpramsdev
 
 ### Prerequisites
 
@@ -49,6 +70,7 @@ The application must be hard-coded to reference the targeted database in this al
 ## Code tests
 
 No tests currently exist in this alpha.
+unit testing is intended for late beta builds
 
 
 
@@ -63,7 +85,7 @@ Contact Alexander Carsner (alexander.mcarsner@my.trident.edu) if interested in c
 
 ## Versioning
 
-Version 0.1.0
+Version 0.1.1
 
 ## Authors
 
