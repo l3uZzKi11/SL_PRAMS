@@ -4,24 +4,22 @@ SL PRAMS (pronounced 'slow' PRAMS) is a self-contained application that allows S
 
 This system leverages a database for accounting and management for historical usage in Squadron planning for fiscal year budget execution.
 
-## CSC425 Module 3 STATUS
+## CSC425 Module 4 STATUS
 
-### This project is currently in the Beta for the GUI.
+### This project is in an initial alpha release.
 ##### Final tweaks to the UI have been completed and primary functionality has been adequately tested
 ##### Local network database has been successfully configured and tested.
-##### The ability to capture the user input and validate entries is the major component to be completed in Module 3 for proper systems integration to work.
 ##### There are no errors in the code nor bugs on user actions.
+
 The system is currently configured to only work on my laptop so full functionality by others would require the VM files which are rather large.
 alternatively, i've created some videos showing the application in action for review that covers the majority of the applications use cases.
 
+A local email server is established and functionally works on the system. 
+This is thanks to a combination of hmail and autosql.  
+This works via a scheduled job that uses a SQL query to determine if the table for purchase requests has new additions and if so gathers up those inputs and emails them to the test user.  
+In prodution this test user would be a distribution group that contains the AOs.  
+Hmail was chosen because it is free and allows for funtionality testing of the system in a closed network.
 
-### The Database Works though!
-its happily chugging along being its database self.
-The email functionality/watchdog service is completely inoperable at this point.  This will be the primary focus in module 4.
-
-# My laptop DIED
-### Horribly and irreversibly
-this, along with long shiftwork prior to my departure, and travel limitations i've lost 5-6 days of productivity... so the progress thus far makes me feel good!
 
 ## Getting Started
 
@@ -46,10 +44,21 @@ Database configuration must be accomplished before the program can successfully 
 #Database overview
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5uzttjHhV_c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-#issues discussion, planning mechanism, configuration tracking
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NnLapZkr_3o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+# AutoSQL configuration
+![Auto S Q L1](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL1.PNG)
+![Auto S Q L2](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL2.PNG)
+![Auto S Q L3](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL3.PNG)
+![Auto S Q L4](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL4.PNG)
 
-https://trello.com/b/b7el5Y7P/slpramsdev
+# Scheduled Job
+![Scheduled Task 1](../../../Documents/School/SL_PRAMS_SLIDE_PICS/scheduled_task_1.PNG)
+
+# Hmail validation
+![Hmail Server1](../../../Documents/School/SL_PRAMS_SLIDE_PICS/hmail_server1.PNG)
+![Mail Success](../../../Documents/School/SL_PRAMS_SLIDE_PICS/mail_success.PNG)
+
+# Overview
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tM3t5HgfL18" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Prerequisites
 
@@ -85,7 +94,7 @@ Contact Alexander Carsner (alexander.mcarsner@my.trident.edu) if interested in c
 
 ## Versioning
 
-Version 0.1.1
+Version 0.1.2
 
 ## Authors
 
