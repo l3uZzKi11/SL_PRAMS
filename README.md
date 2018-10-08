@@ -45,17 +45,17 @@ Database configuration must be accomplished before the program can successfully 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5uzttjHhV_c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # AutoSQL configuration
-![Auto S Q L1](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL1.PNG)
-![Auto S Q L2](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL2.PNG)
-![Auto S Q L3](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL3.PNG)
-![Auto S Q L4](../../../Documents/School/SL_PRAMS_SLIDE_PICS/autoSQL4.PNG)
+![Auto S Q L1](SL_PRAMS/autoSQL1.PNG)
+![Auto S Q L2](SL_PRAMS/autoSQL2.PNG)
+![Auto S Q L3](SL_PRAMS/autoSQL3.PNG)
+![Auto S Q L4](SL_PRAMS/autoSQL4.PNG)
 
 # Scheduled Job
-![Scheduled Task 1](../../../Documents/School/SL_PRAMS_SLIDE_PICS/scheduled_task_1.PNG)
+![Scheduled Task 1](SL_PRAMS/scheduled_task_1.PNG)
 
 # Hmail validation
-![Hmail Server1](../../../Documents/School/SL_PRAMS_SLIDE_PICS/hmail_server1.PNG)
-![Mail Success](../../../Documents/School/SL_PRAMS_SLIDE_PICS/mail_success.PNG)
+![Hmail Server1](SL_PRAMS/hmail_server1.PNG)
+![Mail Success](SL_PRAMS/mail_success.PNG)
 
 # Overview
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tM3t5HgfL18" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
