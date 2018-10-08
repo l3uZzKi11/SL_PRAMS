@@ -31,18 +31,16 @@ Database configuration must be accomplished before the program can successfully 
 
 
 #Example of exceptional user handling
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PFx9jiwqoT4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/PFx9jiwqoT4/0.jpg)](http://www.youtube.com/watch?v=PFx9jiwqoT4 "")
 
 #Example of some errant user handling
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BVBZZ6l5b6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/BVBZZ6l5b6k/0.jpg)](http://www.youtube.com/watch?v=BVBZZ6l5b6k "")
 
 #Brief overview of the core C# mechanisms
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hlA1XqXnlb8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/hlA1XqXnlb8/0.jpg)](http://www.youtube.com/watch?v=hlA1XqXnlb8 "")
 
 #Database overview
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5uzttjHhV_c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/5uzttjHhV_c/0.jpg)](http://www.youtube.com/watch?v=5uzttjHhV_c "")
 
 # AutoSQL configuration
 ![Auto S Q L1](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/autoSQL1.PNG)
@@ -58,7 +56,7 @@ Database configuration must be accomplished before the program can successfully 
 ![Mail Success](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/mail_success.PNG)
 
 # Overview
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tM3t5HgfL18" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![](http://img.youtube.com/vi/tM3t5HgfL18/0.jpg)](http://www.youtube.com/watch?v=tM3t5HgfL18 "")
 
 ### Prerequisites
 
