@@ -10,7 +10,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL_PRAMS", "SL_PRAMS\SL_PRA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3E18A2F-731E-4523-8D80-8011C0D61483}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL1.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL1.PNG
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL2.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL2.PNG
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL3.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL3.PNG
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL4.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\autoSQL4.PNG
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\hmail_server1.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\hmail_server1.PNG
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\mail_success.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\mail_success.PNG
 		README.md = README.md
+		..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\scheduled_task_1.PNG = ..\..\..\Documents\School\SL_PRAMS_SLIDE_PICS\scheduled_task_1.PNG
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleSwitch", "..\toggle-switch-control\WPF\ToggleSwitch\ToggleSwitch.csproj", "{F9426059-27DB-45F0-9012-B1234965FBE0}"
