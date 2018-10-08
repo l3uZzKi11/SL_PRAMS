@@ -30,32 +30,39 @@ Database configuration must be accomplished before the program can successfully 
 # VIDEOS
 
 
-#Example of exceptional user handling
+##### Example of exceptional user handling
+
 [![](http://img.youtube.com/vi/PFx9jiwqoT4/0.jpg)](http://www.youtube.com/watch?v=PFx9jiwqoT4 "")
 
-#Example of some errant user handling
+##### Example of some errant user handling
+
 [![](http://img.youtube.com/vi/BVBZZ6l5b6k/0.jpg)](http://www.youtube.com/watch?v=BVBZZ6l5b6k "")
 
-#Brief overview of the core C# mechanisms
+##### Brief overview of the core C# mechanisms
+
 [![](http://img.youtube.com/vi/hlA1XqXnlb8/0.jpg)](http://www.youtube.com/watch?v=hlA1XqXnlb8 "")
 
-#Database overview
+##### Database overview
+
 [![](http://img.youtube.com/vi/5uzttjHhV_c/0.jpg)](http://www.youtube.com/watch?v=5uzttjHhV_c "")
 
-# AutoSQL configuration
+##### AutoSQL configuration
+
 ![Auto S Q L1](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/autoSQL1.PNG)
 ![Auto S Q L2](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/autoSQL2.PNG)
 ![Auto S Q L3](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/autoSQL3.PNG)
 ![Auto S Q L4](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/autoSQL4.PNG)
 
-# Scheduled Job
+##### Scheduled Job
+
 ![Scheduled Task 1](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/scheduled_task_1.PNG)
 
-# Hmail validation
+##### Hmail validation
+
 ![Hmail Server1](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/hmail_server1.PNG)
 ![Mail Success](https://github.com/saxveritas/SL_PRAMS/blob/master/SL_PRAMS/mail_success.PNG)
 
-# Overview
+##### Overview
 [![](http://img.youtube.com/vi/tM3t5HgfL18/0.jpg)](http://www.youtube.com/watch?v=tM3t5HgfL18 "")
 
 ### Prerequisites
